@@ -1,3 +1,4 @@
+from email.policy import default
 from django.db import models
 import uuid
 # Create your models here.
@@ -6,7 +7,7 @@ class Project(models.Model):
     title = models.CharField(null=False, blank=False, max_length=200)
     description = models.TextField(null=True, blank=True)
     #owner
-    # featured_image = models.ImageField(null=True, blank=True)
+    featured_image = models.ImageField(null=True, blank=True, default='Design.JPG')
     demo_link = models.CharField(null=True, blank=True, max_length=200)
     source_code = models.CharField(null=True, blank=True, max_length=200)
     created = models.DateTimeField(auto_now_add=True)

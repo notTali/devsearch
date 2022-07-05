@@ -1,0 +1,10 @@
+:root{
+    width: 70%;
+    max-width: 1100px;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    margin: auto;
+}
