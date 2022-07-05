@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,6 +15,11 @@
   </head>
   <body>
     <div class="container p-5 my-5 border">
+      <img
+        src="{{project.featured_image.url}}"
+        alt="IMG"
+        class="project-image"
+      />
       <h1>{{project.title}}</h1>
       <ul class="list-group list-group-horizontal">
         {% for tag in tags %}
