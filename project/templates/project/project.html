@@ -7,6 +7,14 @@
     <title>Project</title>
   </head>
   <body>
-    <h1>Project Page</h1>
+    <div class="container p-5 my-5 border">
+      <h1>{{project.title}}</h1>
+      <ul class="list-group list-group-horizontal">
+        {% for tag in tags %}
+        <li class="list-group-item">{{tag.name}}</li>
+        {% endfor %}
+      </ul>
+      <p>{{project.description}}</p>
+    </div>
   </body>
 </html>
