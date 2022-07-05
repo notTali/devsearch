@@ -14,20 +14,7 @@
   </head>
   <body>
     <div class="container p-5 my-5 border">
-      <h1>{{project.title}}</h1>
-      <ul class="list-group list-group-horizontal">
-        {% for tag in tags %}
-        <li class="list-group-item">{{tag.name}}</li>
-        {% endfor %}
-      </ul>
-      <p>{{project.description}}</p>
-      <a
-        href="{% url 'update-project' project.id %}"
-        class="btn btn-primary btn-lg active"
-        role="button"
-        aria-pressed="true"
-        >Update</a
-      >
+      <h1>Are you sure you want to delete {{project.title}}?</h1>
       <a
         href="{% url 'delete-project' project.id %}"
         class="btn btn-secondary btn-lg active"
