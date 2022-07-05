@@ -8,5 +8,20 @@
   </head>
   <body>
     <h1>Projects Page</h1>
+    <table>
+      <thead>
+        <th>Title</th>
+        <th>Time Created</th>
+      </thead>
+
+      <tbody>
+        {% for project in projects %}
+        <tr>
+          <td>{{project.title}}</td>
+          <td>{{project.created}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </body>
 </html>
