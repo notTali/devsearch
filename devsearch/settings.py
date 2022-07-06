@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'project',
     'static',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
