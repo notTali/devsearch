@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
-import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -40,8 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'project',
-    'static',
-    'users',
 ]
 
 MIDDLEWARE = [
@@ -124,9 +121,10 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
-MEDIA_URL = ''
 
-MEDIA_ROOT = os.path.join( BASE_DIR, 'static/images')
+#file upload
+MEDIA_URL = '' #the path where the files are located, it is concatenated with the value of 'upload_to'
+MEDIA_ROOT = '' #the path that will be accessed by the browser to find the files.
 
 
 # Default primary key field type
