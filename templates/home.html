@@ -13,7 +13,7 @@
     <title>Document</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <button
           class="navbar-toggler"
@@ -26,23 +26,23 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">Devsearch</a>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
               <a
-                class="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-                >Disabled</a
+                class="nav-link active"
+                aria-current="page"
+                href="{% url 'profiles' %}"
+                >Home</a
               >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'profiles' %}">Profiles</a>
             </li>
           </ul>
           <form class="d-flex">

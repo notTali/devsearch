@@ -15,10 +15,9 @@
   <body>
     {% block cont %}
     <h1>Users Profiles</h1>
-    <div class="card-deck">
+    <div class="card-group">
       {% for profile in profiles %}
-
-      <div class="card">
+      <div class="card" style="width: 18rem">
         <img src="{{profile.profile_image.url}}" class="card-img-top" alt="" />
         <div class="card-body">
           <h5 class="card-title">{{profile.name}}</h5>
@@ -28,7 +27,6 @@
           </p>
         </div>
       </div>
-
       {% endfor %}
     </div>
 
