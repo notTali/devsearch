@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load static %}
+{% extends 'home.html' %} {% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,6 +14,7 @@
     <title>Projects</title>
   </head>
   <body>
+    {% block cont %}
     <h1>Projects Page</h1>
     <div
       style="
@@ -43,3 +44,4 @@
     </div>
   </body>
 </html>
+{% endblock %}
