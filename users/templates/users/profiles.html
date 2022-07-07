@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% extends 'home.html' %} {% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,6 +13,7 @@
     <title>Document</title>
   </head>
   <body>
+    {% block cont %}
     <h1>Users Profiles</h1>
     <div class="card-deck">
       {% for profile in profiles %}
@@ -29,5 +31,7 @@
 
       {% endfor %}
     </div>
+
+    {% endblock %}
   </body>
 </html>
