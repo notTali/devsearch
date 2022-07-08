@@ -17,5 +17,13 @@
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+}
 
+.form-container{
+    background-color: bisque;
+    color: brown;
+}
+
+label{
+    color: blue;
 }

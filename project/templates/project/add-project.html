@@ -1,6 +1,7 @@
 {% extends 'home.html' %} {% load static %} {% block cont %}
-<h1>Add a project</h1>
-<div class="mb-3">
+
+<div class="form-container mb-3">
+  <h2>Add a project</h2>
   <form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %} {{form.as_p}}
     <input class="btn btn-primary" type="submit" value="Submit" />
