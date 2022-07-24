@@ -3,6 +3,8 @@ from django.db import models
 from django.contrib.auth.models import User 
 import uuid
 
+from django.db.models.signals import post_save
+
 # Create your models here.
 class Profile(models.Model):
     id = models.UUIDField(default=uuid.uuid4, editable=False, null=False, blank=False, primary_key=True)
@@ -15,3 +17,11 @@ class Profile(models.Model):
 
     def __str__(self):
         return str(self.name)
+
+def profileUpdated(sender, instance, created, **kwargs):
+    print('profile saved!')
+    print('instance: ', instance)
+    print('sender: ', sender)
+    print('created: ', created)
+
+post_save.connect(profileUpdated, sender=Profile)
